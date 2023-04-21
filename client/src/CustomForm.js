@@ -1,5 +1,6 @@
 // Import required components from antd and React
 import { Button, Col, Form, Input, Row, Select, Typography } from 'antd';
+import axios from 'axios';
 import React from 'react';
 
 // Destructure Option from Select
@@ -7,8 +8,17 @@ const { Option } = Select;
 
 const { Title } = Typography;
 // Function to handle form submission on success
-const onFinish = (values) => {
+const onFinish = async (values) => {
   console.log('Success:', values);
+  try {
+    const response = await axios.post(
+      'https://us-central1-form-submission-app.cloudfunctions.net/api/submit',
+      values
+    );
+    console.log(response.data.message);
+  } catch (error) {
+    console.error('Error saving submission:', error);
+  }
 };
 
 // Function to handle form submission on failure
