@@ -10,6 +10,10 @@ This application allows users to submit a form with their name, email, and a mod
 - Node.js & Express.js: A server-side framework for building web applications using JavaScript
 - Axios: A library for making HTTP requests from the client to the server
 
+## Screenshot
+<img width="1434" alt="screenshot" src="https://user-images.githubusercontent.com/50631904/233659073-eedc41ef-21d5-43c3-8560-9ab0f871b233.png">
+
+
 ## How to Access
 
 You can access the deployed application at: https://form-submission-app.vercel.app/
